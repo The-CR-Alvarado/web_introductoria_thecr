@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad - Special Kid's por TheCR</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;600&display=swap');
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Fredoka', sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.7;
+        }
+
+        /* NAV */
+        nav {
+            background: rgba(255,255,255,0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #e2e8f0;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            padding: 12px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .nav-logo {
+            width: 40px; height: 40px; background: #2563eb; border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 11px; font-weight: 600; color: white; letter-spacing: -0.3px;
+        }
+        .nav-divider { width: 1px; height: 24px; background: #cbd5e1; }
+        .nav-title { font-size: 18px; font-weight: 600; color: #2563eb; }
+        .nav-back {
+            font-size: 13px; color: #64748b; text-decoration: none;
+            display: flex; align-items: center; gap: 6px;
+            transition: color 0.2s;
+        }
+        .nav-back:hover { color: #2563eb; }
+
+        .custom-nav {
+        background: rgba(255,255,255,0.85);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid #e2e8f0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        padding: 0 24px;
+        height: 64px; /* Altura fija de la barra */
+        display: flex;
+        align-items: center;
+        }
+        .nav-container {
+            max-width: 780px; /* Alineado con el ancho de tu contenido 'main' */
+            margin: 0 auto;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-brand-group {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        .logo-img {
+        height: 42px; /* Aumenté un poco el tamaño para que luzca mejor */
+        width: auto;
+        object-fit: contain; /* PROPIEDAD CORREGIDA */
+        border-radius: 0;    /* Quitamos el redondeado para que sea la imagen pura */
+        display: block;
+        }
+        .back-text {
+            display: inline;
+        }
+        @media (max-width: 600px) {
+            .back-text { display: none; } /* Esconde el texto en móvil para ahorrar espacio */
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+            padding: 48px 24px 40px;
+            text-align: center;
+        }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 6px;
+            background: #dbeafe; color: #1e40af;
+            font-size: 12px; font-weight: 600;
+            padding: 4px 14px; border-radius: 999px;
+            margin-bottom: 16px;
+            text-transform: uppercase; letter-spacing: 0.5px;
+        }
+        .hero h1 { font-size: clamp(26px, 5vw, 38px); font-weight: 600; color: #0f172a; margin-bottom: 10px; }
+        .hero p { font-size: 16px; color: #64748b; max-width: 520px; margin: 0 auto 20px; }
+        .hero-updated {
+            display: inline-flex; align-items: center; gap: 6px;
+            background: white; border: 1px solid #e2e8f0;
+            border-radius: 8px; padding: 6px 14px;
+            font-size: 13px; color: #475569;
+        }
+
+        /* ALERT */
+        .alert {
+            max-width: 780px; margin: 28px auto 0;
+            background: #eff6ff; border: 1px solid #bfdbfe;
+            border-radius: 14px; padding: 16px 20px;
+            display: flex; align-items: flex-start; gap: 12px;
+            font-size: 14px; color: #1e40af; line-height: 1.6;
+        }
+        .alert i { font-size: 18px; margin-top: 2px; flex-shrink: 0; }
+
+        /* MAIN CONTENT */
+        main {
+            max-width: 780px;
+            margin: 32px auto 60px;
+            padding: 0 20px;
+        }
+
+        /* SECTION CARDS */
+        .card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 18px;
+            padding: 24px 28px;
+            margin-bottom: 16px;
+        }
+        .card-header {
+            display: flex; align-items: center; gap: 12px;
+            margin-bottom: 14px;
+        }
+        .card-icon {
+            width: 38px; height: 38px; border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 17px; flex-shrink: 0;
+        }
+        .icon-blue   { background: #dbeafe; color: #1d4ed8; }
+        .icon-green  { background: #dcfce7; color: #15803d; }
+        .icon-purple { background: #ede9fe; color: #7c3aed; }
+        .icon-orange { background: #ffedd5; color: #c2410c; }
+        .icon-slate  { background: #f1f5f9; color: #475569; }
+        .icon-red    { background: #fee2e2; color: #b91c1c; }
+
+        .card-title { font-size: 17px; font-weight: 600; color: #0f172a; }
+        .card p { font-size: 14px; color: #475569; line-height: 1.7; margin-bottom: 10px; }
+        .card p:last-child { margin-bottom: 0; }
+
+        ul.check-list { list-style: none; padding: 0; margin: 10px 0 0; }
+        ul.check-list li {
+            font-size: 14px; color: #475569;
+            display: flex; align-items: flex-start; gap: 8px;
+            padding: 5px 0;
+            border-bottom: 1px solid #f1f5f9;
+        }
+        ul.check-list li:last-child { border-bottom: none; }
+        ul.check-list li i { margin-top: 3px; font-size: 13px; flex-shrink: 0; }
+        .c-green { color: #16a34a; }
+        .c-red   { color: #dc2626; }
+        .c-blue  { color: #2563eb; }
+
+        /* TWO-COL GRID */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+        .grid-2 .card { margin-bottom: 0; }
+        @media (max-width: 600px) { .grid-2 { grid-template-columns: 1fr; } }
+
+        /* TAGS */
+        .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+        .tag {
+            display: inline-block;
+            background: #f1f5f9; color: #475569;
+            font-size: 12px; padding: 3px 10px;
+            border-radius: 999px; border: 1px solid #e2e8f0;
+        }
+
+        /* ADMOB LINK */
+        a.ext-link { color: #2563eb; text-decoration: none; }
+        a.ext-link:hover { text-decoration: underline; }
+
+        /* ARCO highlight */
+        .arco-box {
+            background: #f0fdf4; border: 1px solid #bbf7d0;
+            border-radius: 12px; padding: 14px 18px;
+            font-size: 14px; color: #166534;
+            margin-top: 12px;
+        }
+        .arco-box strong { color: #14532d; }
+
+        /* FOOTER */
+        footer {
+            background: #0f172a;
+            color: white;
+            padding: 40px 24px;
+            text-align: center;
+        }
+        .footer-brand { font-size: 28px; font-weight: 600; color: #60a5fa; margin-bottom: 4px; }
+        .footer-sub { font-size: 13px; color: #94a3b8; margin-bottom: 16px; }
+        .footer-email { font-size: 14px; color: #60a5fa; font-weight: 600; }
+        .footer-copy { font-size: 11px; color: #475569; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+    <nav class="custom-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand-group">
+                <img src="logotipo_the_cr.png" alt="Logo TheCR" class="logo-img">
+                
+                <div class="nav-divider"></div>
+                
+                <span class="nav-title">Special Kid's</span>
+            </a>
+
+            <a href="index.html" class="nav-back">
+                <i class="fas fa-arrow-left"></i> 
+                <span class="back-text">Volver al inicio</span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="hero-badge"><i class="fas fa-shield-alt"></i> Documento Legal</div>
+        <h1>Política de Privacidad</h1>
+        <p>Aplicación educativa e inclusiva para niños y adultos · Plataforma Android</p>
+        <div class="hero-updated">
+            <i class="fas fa-calendar-alt" style="color:#2563eb;"></i>
+            Última actualización: Mayo de 2026
+        </div>
+
+        <div class="alert">
+            <i class="fas fa-info-circle"></i>
+            <span><strong>Resumen:</strong> Special Kid's es una aplicación 100% offline. No recopila, transmite ni comparte ningún dato personal fuera de tu dispositivo. Tu privacidad está protegida por diseño desde su arquitectura.</span>
+        </div>
+    </div>
+
+    <main>
+
+        <!-- 1. Responsable -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon icon-slate"><i class="fas fa-building"></i></div>
+                <span class="card-title">1. Información del responsable</span>
+            </div>
+            <p>Esta política aplica a la aplicación <strong>Special Kid's</strong>, desarrollada por <strong>TheCR</strong>, marca personal de desarrollo de software con propósito social, con sede en México.</p>
+            <ul class="check-list">
+                <li><i class="fas fa-envelope c-blue"></i> Contacto: soporte.specialkids@gmail.com</li>
+                <li><i class="fab fa-google-play c-blue"></i> Plataforma de distribución: Google Play Store</li>
+                <li><i class="fab fa-android c-blue"></i> Sistema operativo: Android</li>
+            </ul>
+        </div>
+
+        <!-- 2. Datos que sí recopila -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon icon-green"><i class="fas fa-database"></i></div>
+                <span class="card-title">2. Datos que recopilamos</span>
+            </div>
+            <p>La aplicación solicita únicamente la información mínima para personalizar la experiencia. Estos datos son almacenandos <strong>exclusivamente en el dispositivo</strong> mediante una base de datos local SQLite, gestionada a través de la librería Room de Android, sin conexión a servidores externos de ningún tipo:</p>
+            <ul class="check-list">
+                <li><i class="fas fa-check c-green"></i> Nombre o apodo del usuario (opcional)</li>
+                <li><i class="fas fa-check c-green"></i> Edad o rango de edad (para adaptar los contenidos)</li>
+                <li><i class="fas fa-check c-green"></i> Perfil seleccionado: Explorador, Estudiante LSM o Apoyo Intelectual</li>
+                <li><i class="fas fa-check c-green"></i> Progreso acumulado dentro de los módulos educativos</li>
+            </ul>
+        </div>
+
+        <!-- 3. Datos que NO recopila -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon icon-red"><i class="fas fa-ban"></i></div>
+                <span class="card-title">3. Datos que NO recopilamos</span>
+            </div>
+            <p>Special Kid's fue diseñada con privacidad desde su arquitectura. En ningún caso recopilamos, accedemos ni procesamos:</p>
+            <ul class="check-list">
+                <li><i class="fas fa-times c-red"></i> Correo electrónico, contraseña ni número de teléfono</li>
+                <li><i class="fas fa-times c-red"></i> Ubicación GPS ni geolocalización de ningún tipo</li>
+                <li><i class="fas fa-times c-red"></i> Acceso a cámara o micrófono (versión actual 1.0)</li>
+                <li><i class="fas fa-times c-red"></i> Contactos ni agenda del dispositivo</li>
+                <li><i class="fas fa-times c-red"></i> Identificadores de publicidad personalizados (IDFA / GAID)</li>
+                <li><i class="fas fa-times c-red"></i> Datos biométricos de ningún tipo</li>
+                <li><i class="fas fa-times c-red"></i> Información financiera o de tarjetas de crédito</li>
+            </ul>
+        </div>
+
+        <!-- 4 y 5 en grid -->
+        <div class="grid-2">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon icon-green"><i class="fas fa-wifi"></i></div>
+                    <span class="card-title">4. Funcionamiento offline</span>
+                </div>
+                <p>La app opera completamente sin conexión a internet tras la instalación inicial. Los datos del usuario nunca abandonan el dispositivo.</p>
+                <ul class="check-list">
+                    <li><i class="fas fa-check c-green"></i> Sin sincronización en la nube</li>
+                    <li><i class="fas fa-check c-green"></i> Sin servidores externos</li>
+                    <li><i class="fas fa-check c-green"></i> Sin transmisión de datos</li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon icon-purple"><i class="fas fa-trash-alt"></i></div>
+                    <span class="card-title">5. Eliminación de datos</span>
+                </div>
+                <p>Al desinstalar la aplicación, toda la información almacenada en el dispositivo se elimina permanentemente del sistema de archivos de Android.</p>
+                <ul class="check-list">
+                    <li><i class="fas fa-check c-green"></i> Eliminación automática al desinstalar</li>
+                    <li><i class="fas fa-check c-green"></i> Sin copias de respaldo externas</li>
+                    <li><i class="fas fa-check c-green"></i> Sin retención posterior de datos</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 6. AdMob -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon icon-orange"><i class="fas fa-ad"></i></div>
+                <span class="card-title">6. Publicidad (Google AdMob)</span>
+            </div>
+            <p>La versión gratuita de Special Kid's puede mostrar anuncios gestionados por <strong>Google AdMob</strong>, configurados exclusivamente bajo la política de <strong>anuncios aptos para familias</strong> (Google Play Families Ads Program). Esto implica:</p>
+            <ul class="check-list">
+                <li><i class="fas fa-check c-green"></i> Solo se muestran anuncios certificados como aptos para niños</li>
+                <li><i class="fas fa-check c-green"></i> No se utilizan identificadores de publicidad personalizados para usuarios menores de edad</li>
+                <li><i class="fas fa-check c-green"></i> No se recopilan datos de comportamiento para publicidad dirigida</li>
+                <li><i class="fas fa-check c-green"></i> Google AdMob tiene su propia <a class="ext-link" href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de Privacidad</a></li>
+            </ul>
+            <p style="margin-top: 12px;">Los usuarios pueden eliminar la publicidad de forma permanente mediante una <strong>compra única</strong> dentro de la app, sin suscripciones ni cargos recurrentes.</p>
+            <div class="tags">
+                <span class="tag">Sin anuncios de terceros no verificados</span>
+                <span class="tag">Sin rastreo entre apps</span>
+                <span class="tag">Families Program certificado</span>
+                <span class="tag">Pago único sin suscripción</span>
+            </div>
+        </div>
+
+        <!-- 7. Menores -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon icon-blue"><i class="fas fa-child"></i></div>
+                <span class="card-title">7. Protección de menores de edad</span>
+            </div>
+            <p>Special Kid's está diseñada con el bienestar de niños y personas con necesidades especiales como prioridad absoluta. Cumplimos con las siguientes normativas:</p>
+            <ul class="check-list">
+                <li><i class="fas fa-check c-green"></i> <strong>Google Play Families Policy</strong> — Política de contenido para familias de Google Play</li>
+                <li><i class="fas fa-check c-green"></i> <strong>COPPA</strong> — Children's Online Privacy Protection Act (Estados Unidos)</li>
+                <li><i class="fas fa-check c-green"></i> <strong>LFPDPPP</strong> — Ley Federal de Protección de Datos Personales en Posesión de Particulares (México)</li>
+            </ul>
+            <p style="margin-top: 12px;">No solicitamos ni procesamos datos personales de menores de 13 años sin el consentimiento verificable de un padre o tutor. Al ser una aplicación offline sin registro de cuenta, este riesgo es estructuralmente nulo.</p>
+        </div>
+
+        <!-- 8 y 9 en grid -->
+        <div class="grid-2">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon icon-slate"><i class="fas fa-lock"></i></div>
+                    <span class="card-title">8. Permisos del sistema</span>
+                </div>
+                <p>La app solicita únicamente los permisos estrictamente necesarios para su funcionamiento:</p>
+                <ul class="check-list">
+                    <li><i class="fas fa-check c-green"></i> Almacenamiento interno (base de datos local)</li>
+                    <li><i class="fas fa-check c-green"></i> Audio del sistema (efectos de sonido y feedback auditivo)</li>
+                    <li><i class="fas fa-times c-red"></i> Sin acceso a internet en uso normal</li>
+                    <li><i class="fas fa-times c-red"></i> Sin acceso a cámara (v1.0)</li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon icon-orange"><i class="fas fa-sync-alt"></i></div>
+                    <span class="card-title">9. Cambios a esta política</span>
+                </div>
+                <p>TheCR se compromete a actualizar este documento cuando se agreguen funcionalidades que impliquen nuevos usos de datos, como el reconocimiento por cámara previsto para la versión 2.0.</p>
+                <p>Los cambios serán notificados mediante una actualización publicada en Google Play Store. La fecha de última actualización siempre estará visible en esta página.</p>
+            </div>
+        </div>
+
+        <!-- 10. ARCO -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon icon-blue"><i class="fas fa-envelope"></i></div>
+                <span class="card-title">10. Contacto y derechos ARCO</span>
+            </div>
+            <p>Conforme a la legislación mexicana (LFPDPPP), tienes derecho a <strong>Acceder, Rectificar, Cancelar u Oponerte</strong> al tratamiento de tus datos personales.</p>
+            <div class="arco-box">
+                <strong>Nota:</strong> Dado que todos los datos de Special Kid's se almacenan exclusivamente en tu dispositivo de forma local, puedes ejercer estos derechos directamente desde la configuración de tu dispositivo Android, o bien desinstalando la aplicación, lo que elimina toda la información de forma permanente.
+            </div>
+            <p style="margin-top: 14px;">Para dudas adicionales, solicitudes o reportes de privacidad, contáctanos en:</p>
+            <ul class="check-list">
+                <li><i class="fas fa-envelope c-blue"></i> soporte.specialkids@gmail.com</li>
+                <li><i class="fas fa-clock c-blue"></i> Tiempo de respuesta: máximo 5 días hábiles</li>
+            </ul>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-brand">TheCR</div>
+        <div class="footer-sub">Desarrollo de Software con Propósito Social - México</div>
+
+        <div class="flex justify-center items-center gap-4 flex-wrap mb-3 text-xs">
+            <a href="index.html" class="text-slate-400 no-underline hover:text-blue-400 transition-colors">
+                Inicio
+            </a>
+            
+            <span class="text-slate-700 select-none">|</span>
+            <a href="politicas_privacidad.html" class="text-blue-400 no-underline hover:text-blue-200 transition-colors">
+                Política de Privacidad
+            </a>
+            
+            <span class="text-slate-700 select-none">|</span>
+            <a href="terminos_uso.html" class="text-slate-400 no-underline hover:text-blue-400 transition-colors">
+                Términos de Uso
+            </a>
+        </div>
+
+        <p class="text-sm text-slate-400">
+            Soporte: <span class="text-blue-400 font-semibold select-all">soporte.specialkids@gmail.com</span>
+        </p>
+        <div class="footer-copy">© 2026 Special Kid's por TheCR - Todos los derechos reservados</div>
+    </footer>
+
+</body>
+</html>

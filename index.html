@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Kid's por TheCR</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;600&display=swap');
+        body { font-family: 'Fredoka', sans-serif; scroll-behavior: smooth; }
+        .hero-gradient { background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%); }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05); }
+        .gallery-card { transition: all 0.3s ease; }
+        .gallery-card:hover { transform: scale(1.02); }
+    </style>
+</head>
+<body class="bg-white text-slate-800">
+
+    <nav class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-100">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <img src="logotipo_the_cr.png" alt="Logo TheCR" class="h-10 w-auto">
+                <div class="h-6 w-px bg-slate-300"></div>
+                <span class="text-xl font-bold text-blue-600">Special Kid's</span>
+            </div>
+            <div class="hidden md:flex space-x-6 text-sm font-medium text-slate-600">
+                <a href="#inicio" class="hover:text-blue-600">Inicio</a>
+                <a href="#experiencias" class="hover:text-blue-600">Galería</a>
+                <a href="#funciones" class="hover:text-blue-600">Funciones</a>
+                <a href="#alcance" class="hover:text-blue-600">Alcance</a>
+                <a href="#privacidad" class="hover:text-blue-600">Privacidad</a>
+                <a href="politicas_privacidad.html" class="hover:text-blue-600 text-blue-500 font-semibold flex items-center gap-1">
+                    <i class="fas fa-shield-alt text-xs"></i> Política de Privacidad
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="inicio" class="hero-gradient pt-16 pb-24 px-4">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 text-center md:text-left mb-12 md:mb-0">
+                <h1 class="text-5xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
+                    Inclusión que se siente <span class="text-blue-600 text-6xl">natural.</span>
+                </h1>
+                <p class="text-xl text-slate-600 mb-8 max-w-lg">
+                    Impulsado por <strong>TheCR</strong>, Special Kid's es el compañero ideal para el aprendizaje de LSM y el desarrollo de la autonomía.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <div class="bg-slate-900 text-white px-8 py-4 rounded-2xl font-bold flex items-center justify-center space-x-3 cursor-not-allowed opacity-90 shadow-xl">
+                        <i class="fab fa-google-play text-2xl"></i>
+                        <div class="text-left">
+                            <p class="text-xs uppercase opacity-70">Próximamente en</p>
+                            <p class="text-lg leading-none">Google Play</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="bg-white/40 p-10 rounded-full border-4 border-dashed border-blue-200">
+                    <img src="guia_lsm.png" alt="Mascota Special Kid's" class="w-full h-auto drop-shadow-xl transform hover:scale-95 transition-transform">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="experiencias" class="py-24 px-4 bg-slate-50">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Descubre la Experiencia</h2>
+                <p class="text-slate-500">Un vistazo a lo que Special Kid's tiene para ti.</p>
+            </div>
+
+            <div class="space-y-20">
+                <div class="flex flex-col md:flex-row items-center gap-12 gallery-card">
+                    <div class="md:w-1/2">
+                        <img src="mascota_saludando.png" class="w-32 mb-4 mx-auto md:mx-0" alt="Mascota">
+                        <h3 class="text-2xl font-bold mb-4 text-blue-600 text-center md:text-left">Aprendizaje Divertido</h3>
+                        <p class="text-lg text-slate-600 text-center md:text-left italic">"Aprende Lengua de Señas Mexicana (LSM) de forma divertida."</p>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="captura_general.jpg" alt="Captura App General" class="rounded-3xl shadow-2xl border-8 border-white w-full">
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row-reverse items-center gap-12 gallery-card">
+                    <div class="md:w-1/2">
+                        <img src="guia_lsm.png" class="w-32 mb-4 mx-auto md:mx-0" alt="Mascota Exploradora">
+                        <h3 class="text-2xl font-bold mb-4 text-orange-500 text-center md:text-left">Reto Mental</h3>
+                        <p class="text-lg text-slate-600 text-center md:text-left italic">"Desafía tu mente con juegos competitivos y niveles complejos."</p>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="captura_explorador.png" alt="Captura Modo Explorador" class="rounded-3xl shadow-2xl border-8 border-white w-full">
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row items-center gap-12 gallery-card">
+                    <div class="md:w-1/2">
+                        <img src="mascota_saludando.png" class="w-32 mb-4 mx-auto md:mx-0" alt="Mascota LSM">
+                        <h3 class="text-2xl font-bold mb-4 text-blue-400 text-center md:text-left">Sin Presiones</h3>
+                        <p class="text-lg text-slate-600 text-center md:text-left italic">"Practica señas sin presión: aprendizaje libre y a tu propio ritmo."</p>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="captura_lsm_juego.png" alt="Captura Aprendizaje LSM" class="rounded-3xl shadow-2xl border-8 border-white w-full">
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row-reverse items-center gap-12 gallery-card">
+                    <div class="md:w-1/2">
+                        <img src="guia_lsm.png" class="w-32 mb-4 mx-auto md:mx-0" alt="Mascota Guía">
+                        <h3 class="text-2xl font-bold mb-4 text-purple-500 text-center md:text-left">Autonomía Diaria</h3>
+                        <p class="text-lg text-slate-600 text-center md:text-left italic">"Actividades de autonomía: higiene, vestimenta y reconocimiento personal."</p>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="captura_intelectual.png" alt="Captura Apoyo Intelectual" class="rounded-3xl shadow-2xl border-8 border-white w-full">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="funciones" class="py-24 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Detalles de la Aplicación</h2>
+                <p class="text-slate-500">Estructura técnica de nuestros tres pilares educativos.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-3xl bg-orange-50 border border-orange-100 card-shadow">
+                    <i class="fas fa-gamepad text-4xl text-orange-500 mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-4">Modo Explorador</h3>
+                    <ul class="space-y-3 text-slate-600 text-sm">
+                        <li><i class="fas fa-check text-orange-500 mr-2"></i> Juegos de lógica y agilidad.</li>
+                        <li><i class="fas fa-check text-orange-500 mr-2"></i> Niveles de dificultad progresiva.</li>
+                        <li><i class="fas fa-check text-orange-500 mr-2"></i> Diccionario visual interactivo.</li>
+                        <li><i class="fas fa-check text-orange-500 mr-2"></i> Progreso visual estadístico.</li>
+                        <li><i class="fas fa-check text-orange-500 mr-2"></i> Experiencia competitiva sana.</li>
+                    </ul>
+                </div>
+
+                <div class="p-8 rounded-3xl bg-blue-50 border border-blue-100 card-shadow">
+                    <i class="fas fa-hands text-4xl text-blue-500 mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-4">Estudiante LSM</h3>
+                    <ul class="space-y-3 text-slate-600 text-sm">
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> Juegos de lógica y agilidad.</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> Progreso visual estadístico.</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> Diccionario visual interactivo.</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> Aprendizaje libre de estrés y tiempos.</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> Refuerzo visual constante.</li>
+                    </ul>
+                </div>
+
+                <div class="p-8 rounded-3xl bg-purple-50 border border-purple-100 card-shadow">
+                    <i class="fas fa-star text-4xl text-purple-500 mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-4">Apoyo Intelectual</h3>
+                    <ul class="space-y-3 text-slate-600 text-sm">
+                        <li><i class="fas fa-check text-purple-500 mr-2"></i> Guías de voz personalizadas.</li>
+                        <li><i class="fas fa-check text-purple-500 mr-2"></i> Módulos de higiene y vestimenta.</li>
+                        <li><i class="fas fa-check text-purple-500 mr-2"></i> Reconocimiento del esquema corporal.</li>
+                        <li><i class="fas fa-check text-purple-500 mr-2"></i> Refuerzo visual constante.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="alcance" class="py-20 bg-slate-50 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 font-bold">Transparencia del Software</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-3xl shadow-sm border-t-4 border-green-500">
+                    <h4 class="text-green-600 font-bold mb-4 text-xl italic underline decoration-green-200">Lo que hace</h4>
+                    <p class="text-sm text-slate-600 leading-relaxed mb-4">Nuestro software prioriza la accesibilidad y la seguridad:</p>
+                    <ul class="space-y-4 text-slate-600 text-sm">
+                        <li><i class="fas fa-wifi-slash mr-2"></i> Ejecución 100% offline tras la instalación.</li>
+                        <li><i class="fas fa-user-circle mr-2"></i> Adaptación de UX según el perfil de usuario.</li>
+                        <li><i class="fas fa-volume-up mr-2"></i> Feedback auditivo para facilitar la comprensión.</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-sm border-t-4 border-slate-300">
+                    <h4 class="text-slate-500 font-bold mb-4 text-xl italic underline decoration-slate-200">Lo que no hace (aún)</h4>
+                    <p class="text-sm text-slate-600 leading-relaxed mb-4">Estamos en constante evolución:</p>
+                    <ul class="space-y-4 text-slate-600 text-sm">
+                        <li><i class="fas fa-cloud-upload-alt mr-2 text-slate-300"></i> No sincroniza datos en la nube (Privacidad total).</li>
+                        <li><i class="fas fa-camera-retro mr-2 text-slate-300"></i> Reconocimiento por cámara (Versión 2.0).</li>
+                        <li><i class="fas fa-globe mr-2 text-slate-300"></i> No requiere conexión constante a internet.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="privacidad" class="py-24 px-4 bg-white border-t border-slate-100">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold mb-10 text-center">Aviso de Privacidad y Seguridad</h2>
+            
+            <div class="grid md:grid-cols-2 gap-10 items-start">
+                <div class="space-y-8">
+                    <div>
+                        <h4 class="font-bold text-blue-600 mb-2"><i class="fas fa-user-shield mr-2"></i> Protección de Datos</h4>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            <strong>Special Kid's</strong> no recopila, procesa ni almacena información personal fuera del dispositivo móvil. Datos como nombre, edad y rol se almacenan localmente en una base de datos <strong>SQLite</strong> interna.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-blue-600 mb-2"><i class="fas fa-shield-virus mr-2"></i> Seguridad Local</h4>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Al ser una aplicación offline, no existe riesgo de filtraciones externas. Al desinstalar la aplicación, toda la información se elimina permanentemente del sistema de archivos del dispositivo.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <div>
+                        <h4 class="font-bold text-blue-600 mb-2"><i class="fas fa-child mr-2"></i> Normativa para Menores</h4>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Cumplimos con las normativas de protección de menores de Google Play. No solicitamos acceso a contactos, ubicación GPS ni datos sensibles que comprometan la identidad del usuario.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-blue-600 mb-2"><i class="fas fa-ad mr-2"></i> Publicidad y Monetización</h4>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            La app podrá incluir anuncios filtrados para ser aptos para familias (AdMob). Ofreceremos una opción de pago único para eliminar publicidad, protegiendo siempre la experiencia del niño.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 bg-blue-50 p-6 rounded-2xl border border-blue-100 text-center">
+                <p class="text-xs text-blue-800 mb-4">
+                    <strong>TheCR</strong> se compromete a actualizar esta política conforme se agreguen nuevas funciones (como el uso de cámara) para mantener la transparencia total con el usuario.
+                </p>
+                <a href="politicas_privacidad.html" class="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-xl text-sm font-semibold hover:bg-blue-700 transition-colors">
+                    <i class="fas fa-shield-alt"></i>
+                    Leer Política de Privacidad Completa
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-white py-12 px-6">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <!-- Lado Izquierdo: Branding y Propósito -->
+            <div class="text-center md:text-left">
+                <p class="text-3xl font-bold text-blue-400 mb-2 tracking-tight">TheCR</p>
+                <p class="text-slate-400 text-sm font-medium">Desarrollo de Software con Propósito Social - México.</p>
+                <p class="text-slate-500 text-xs mt-2 italic">"Construyendo tecnología inclusiva para México."</p>
+            </div>
+
+            <!-- Lado Derecho: Enlaces y Contacto -->
+            <div class="flex flex-col items-center md:items-end text-center md:text-right space-y-3">
+                <!-- Navegación del Footer -->
+                <div class="flex justify-center items-center gap-4 flex-wrap mb-3 text-xs">
+                    <a href="index.html" class="text-blue-400 no-underline hover:text-blue-200 transition-colors">
+                        Inicio
+                    </a>
+                    
+                    <span class="text-slate-700 select-none">|</span>
+                    <a href="politicas_privacidad.html" class="text-slate-400 no-underline hover:text-blue-400 transition-colors">
+                        Política de Privacidad
+                    </a>
+                    
+                    <span class="text-slate-700 select-none">|</span>
+                    <a href="terminos_uso.html" class="text-slate-400 no-underline hover:text-blue-400 transition-colors">
+                        Términos de Uso
+                    </a>
+                </div>
+
+                <!-- Contacto -->
+                <p class="text-sm text-slate-400">
+                    Soporte: <span class="text-blue-400 font-semibold select-all">soporte.specialkids@gmail.com</span>
+                </p>
+
+                <!-- Copyright -->
+                <p class="text-slate-500 text-xs pt-2 border-t border-slate-800 w-full md:w-auto">
+                    © 2026 Special Kid's por TheCR. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
